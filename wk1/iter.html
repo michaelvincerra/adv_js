@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iterator Practice</title>
+</head>
+<body>
+
+
+
+<h1>Iterator Practice </h1>
+
+<h2> Items : Prices </h2>
+
+<table id="root">
+
+</table>
+
+<script>
+
+        const data = [
+        {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
+        {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
+        {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
+        {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
+        {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
+        {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
+        ]
+            console.log(data);
+
+
+
+         <!--const html1 = '<ul><li>' + data[0].name + ' ' +  data[0].price + '</li></ul>' ;-->
+         <!--document.write(html1);-->
+
+         <!--const html2 = '<ul><li>' + data[1].name + ' ' +  data[1].price + '</li></ul>' ;-->
+         <!--document.write(html2);-->
+
+         <!--const html3 = '<ul><li>' + data[2].name + ' ' +  data[2].price + '</li></ul>' ;-->
+         <!--document.write(html3);-->
+
+         <!--const html4 = '<ul><li>' + data[3].name + ' ' +  data[3].price + '</li></ul>' ;-->
+         <!--document.write(html4);-->
+
+        <!--const html5 = '<ul><li>' + data[4].name + ' ' +  data[4].price + '</li></ul>' ;-->
+         <!--document.write(html5);-->
+
+         <!--const html6 = '<ul><li>' + data[5].name + ' ' +  data[5].price + '</li></ul>' ;-->
+         <!--document.write(html6);-->
+
+
+// Now use an iterator to accomplish the same as thing above
+
+        const rows = [];
+        let currentName = null;
+
+        for (let i = 0; i < data.length; i ++) {
+            let record = data[i]
+
+        if (record.name !== currentName) {
+            currentName = record.name
+            console.log(currentName)
+            rows.push(`<tr><td>${currentName}</td><td>${record.price}</td></tr>`)
+        }
+        }
+
+        // https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
+        // Only available as a method of the global document object.
+
+        document.getElementById("root").innerHTML = rows
+
+
+        <!--<table>-->
+          <!--<tr>-->
+            <!--<th> Name</th><th>Price</th>-->
+          <!--</tr>-->
+          <!--{rows}-->
+        <!--</table>-->
+        <!--document.write(rows.currentCategory);-->
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
