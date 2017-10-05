@@ -1,8 +1,3 @@
-//TODO: Get Stopwatch to work
-// TODO: Make Header appear.
-// TODO: Understand 'props' better.
-// TODO: A Component Class is required in order to add "state" to a component.
-
 
 // Creating Components augments the functionality of the Application
 //
