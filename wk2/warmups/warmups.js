@@ -7,7 +7,8 @@
 // NEW METHODS
 // .slice(0,2)
 // .splice() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
-// indexOf()
+// - modifies the array in place
+// indexOf() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf
 // .repeat()
 
 function notString(notty){
@@ -56,19 +57,34 @@ console.log(missingChar('kitten', 4)) // 'kittn'
 
 /////////// MORE PRACTICE ON .slice()  /////////////
 
-
-
-
-
 function front3(three) {
     return three.slice(0,3).repeat(3)
   }
   console.log(front3("zombie"))
+
+// Solve the problem functionally per Peter Banka
+function front3(inputString) {
+
+}
+
+console.log(front3());
+
+
+
   
+
 function stringTimes(parola, volta) {
   return parola.repeat(volta) 
 }  
 console.log(stringTimes("Bada", 3) + " BOOM! ")
+
+
+const stringTimes1 = function (str,n) {
+  // Goal is  to solve is functionally; and to NOT use a variable
+  return Array(n).fill(str).reduce((total, current) => total + str)
+  return Array(n).fill(str).join('')
+
+console.log(stringTimes1());
 
 
 function makeBricks(small, big, goal) {
@@ -83,17 +99,95 @@ big = 5 * big
     return false 
   }
 }
-console.log(`The answer is ` + makeBricks(1, 5, 26))
+console.log(`The 1st answer is ` + makeBricks(1, 5, 26))
+console.log(`The 2nd answer is ` + makeBricks(1, 5, 27))
+
 
 // How do I get subtotal as a variable to print in console.log()?
 // Could declar as a global variable, but then it doesn't evaluate to 10.
 //  + {subtotal} + ???
 
 function receipt(subtotal) {
-  tax_tip = subtotal * 0.24
+  let tax_tip = subtotal * 0.24
   return subtotal + tax_tip
 }
 console.log(`Your total includes tax and tip: ` + receipt(10))
+console.log(`Your total includes tax and tip: ` + receipt(20))
+
+
+
+
+function stringTimes(word, number) {
+  return word.repeat(number)
+}
+console.log(stringTimes('Hi', 2)); 
+console.log(stringTimes('Hi', 3));
+console.log(stringTimes('Hi', 1)); 
+
+// function stringBits(phrase) {
+//   word = word.splice()
+//   for(i = 0; i < phrase.length; i ++) {
+//     if(word[i] === 2 % 1){
+//       return phrase.splice()
+//     }
+//   }
+//   let word 
+
+//   .splice()
+
+// }
+
+
+const stringBits1 = (string) => {
+  
+  let out = ''
+  for (let i = 0; i < string.length; i+=2) {
+    out += string[i]
+  }
+  return out
+}
+
+
+const stringBits = (string) => {
+  const arrayChar = string.split('')
+  const testIfEven = (i) => i %  2 === 0
+  const evenChars 
+  return string.split('').filter((c,i) => i % 2 ===0).join('')
+}
+​
+console.assert(stringBits1('Hello') === 'Hlo')
+console.assert(stringBits1('Hi') === 'H')
+console.assert(stringBits1('Heeololeo') === 'Hello')
+
+
+
+const stringSplosion = function (str) {
+  let to_return = '';
+  for (let i = 0; i < str.length + 1; i++) {
+      to_return = to_return + str.substring(0,i)
+  }
+  return to_return
+};
+
+
+const stringSplosion = function (str) {
+  let toReturn = '';
+  Array(str.length).fill().forEach((_,i) => {
+    toReturn = toReturn +str.substring(0,1)
+  })
+}
+
+
+
+
+
+console.log(stringSplosion('Code'));
+console.log(stringSplosion('abc'));
+console.log(stringSplosion('ab'));
+
+
+
+
 
 
 
@@ -102,20 +196,82 @@ console.log(`Your total includes tax and tip: ` + receipt(10))
 //   return Math.min(10, 20, 30, 40)
 // }
 // console.log(findSmallest(10, 20, 30, 40))
-
-
   
 function removeSmallest(numbers) {
   // Set variable to find minimum value, 
   // using spread operator ... ES6
 
   var min = Math.min(...numbers);
-  
+  // splice(start, deleteCount, add item[optional])
+  // SYNTAX: (... indexOf(min),1): Find index of 'min' and delete 1 item
   numbers.splice(numbers.indexOf(min),1);
   return numbers;
 }
 
 console.log(removeSmallest([10, 20, 30, 40]));
 
+//////////// MORE PRACTICE ON .slice() //////////////
+
+// function isOdd(numbers) {
+//   // Boolean. Are all numbers in array divisible by 2?
+//     if (numbers % 2 === 0) {
+//       return true
+//     }else{
+//       return false  
+//       console.log('At least one number is not divisible by 2');
+//     }
+//   }
+// console.log(isOdd(2, 4, 8, 16, 19, 32, 64));
 
 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
+// function even(numbers) {
+//   // Boolean. Are all numbers in array divisible by 2?
+//    let oddNum = numbers.filter(()=> )
+//   return number % 2 ===0
+
+//   }
+//   console.log(even([4,8,9]);
+  
+  // arr=[]
+  // for(i=0; i < arr.length; i ++)
+
+
+
+  // arr = []
+  // numbers.forEach((n, i)=> {
+  //   if(n % 2 === 0){
+  //   }else{
+  //     return false
+  //   }
+  // })
+
+  //   if (numbers % 2 !== 0) {
+  //     numbers.splice()
+  //   }else{
+  //     return false  
+  //     console.log('At least one number is not divisible by 2');
+  //   }
+  // }
+// console.log(notSqrt([2, 4, 7]));
+
+
+// function even(num) {
+//   num = num % 2 ===0
+//   myArray = [1,2,3,4,5,6,7,8,9,10,11,12];
+//   const myEvenArray = myArray.filter(num)  
+//   return myEvenArray;
+// };
+// console.log(even(num)); 
+
+const array = [1,2,3,4,5]
+
+for (i in array)
+console.log(i);
+
+
+for (i of array)
+console.log(i);
+
+array.forEach((i) => console.log(i))

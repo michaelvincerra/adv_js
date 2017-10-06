@@ -10,7 +10,7 @@ export default class ProductRow extends Component {
     }
     const key = this.props.record.category + this.props.record.name
     return (
-      <tr key={key}><td style={textColor}>{this.props.record.name}</td><td>{this.props.record.price}</td></tr>
+      <tr className='product-rows' key={key}><td style={textColor}>{this.props.record.name}</td><td>{this.props.record.price}</td></tr>
     )
   }
 }
