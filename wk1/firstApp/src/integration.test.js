@@ -6,7 +6,8 @@ import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 Enzyme.configure({ adapter: new Adapter() });
-
+// http://airbnb.io/enzyme/   
+// This test suite uses Enzyme
 /* globals beforeEach describe it expect */
 
 describe('integration testing', () => {

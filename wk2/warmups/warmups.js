@@ -4,12 +4,14 @@
 // let not = "not_a_word";
 // answer = [];
 
-// NEW METHODS
+// NEW METHODS: LEARN. RINSE AND REPEAT
+// Array()
 // .slice(0,2)
 // .splice() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 // - modifies the array in place
 // indexOf() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf
 // .repeat()
+
 
 function notString(notty){
   const phrase = String()
@@ -63,11 +65,11 @@ function front3(three) {
   console.log(front3("zombie"))
 
 // Solve the problem functionally per Peter Banka
-function front3(inputString) {
+// function front3(inputString) {
 
-}
+// }
 
-console.log(front3());
+// console.log(front3());
 
 
 
@@ -83,7 +85,6 @@ const stringTimes1 = function (str,n) {
   // Goal is  to solve is functionally; and to NOT use a variable
   return Array(n).fill(str).reduce((total, current) => total + str)
   return Array(n).fill(str).join('')
-
 console.log(stringTimes1());
 
 
@@ -148,18 +149,14 @@ const stringBits1 = (string) => {
 }
 
 
-const stringBits = (string) => {
-  const arrayChar = string.split('')
-  const testIfEven = (i) => i %  2 === 0
-  const evenChars 
-  return string.split('').filter((c,i) => i % 2 ===0).join('')
-}
-​
-console.assert(stringBits1('Hello') === 'Hlo')
-console.assert(stringBits1('Hi') === 'H')
-console.assert(stringBits1('Heeololeo') === 'Hello')
-
-
+// const stringBits = (string) => {
+//   const arrayChar = string.split('')
+//   const testIfEven = (i) => i %  2 === 0
+//   const evenChars 
+//   return string.split('').filter((c,i) => i % 2 ===0).join('')
+// }
+// ​
+// console.assert(stringBits1('Hello') )
 
 const stringSplosion = function (str) {
   let to_return = '';
@@ -170,26 +167,16 @@ const stringSplosion = function (str) {
 };
 
 
-const stringSplosion = function (str) {
+const stringSplosion1 = function (str) {
   let toReturn = '';
   Array(str.length).fill().forEach((_,i) => {
     toReturn = toReturn +str.substring(0,1)
   })
 }
 
-
-
-
-
 console.log(stringSplosion('Code'));
 console.log(stringSplosion('abc'));
-console.log(stringSplosion('ab'));
-
-
-
-
-
-
+console.log(stringSplosion1('ab'));
 
 // function findSmallest(a, b, c, d) {
 //   // What is the difference btw Math.min() and Math.min.apply()?
@@ -265,13 +252,14 @@ console.log(removeSmallest([10, 20, 30, 40]));
 // };
 // console.log(even(num)); 
 
-const array = [1,2,3,4,5]
+// const array = [1,2,3,4,5]
 
-for (i in array)
-console.log(i);
+// for (i in array)
+// console.log(i);
 
 
-for (i of array)
-console.log(i);
+// for (i of array)
+// console.log(i);
 
-array.forEach((i) => console.log(i))
+// array.forEach((i) => console.log(i)
+}
