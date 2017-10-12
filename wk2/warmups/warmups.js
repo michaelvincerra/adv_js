@@ -167,15 +167,19 @@ const stringSplosion = function (str) {
 };
 
 
+
+// Rewrite with a reduce 
 const stringSplosion1 = function (str) {
-  let toReturn = '';
+  let value = '';
+  // .fill fills each index position with a value
   Array(str.length).fill().forEach((_,i) => {
-    toReturn = toReturn +str.substring(0,1)
+    value = value + str.substring(0,i+1)
   })
+  return value
 }
 
-console.log(stringSplosion('Code'));
-console.log(stringSplosion('abc'));
+console.log(stringSplosion1('Code'));
+console.log(stringSplosion1('abc'));
 console.log(stringSplosion1('ab'));
 
 // function findSmallest(a, b, c, d) {
