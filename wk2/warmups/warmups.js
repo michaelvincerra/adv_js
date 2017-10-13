@@ -78,6 +78,7 @@ function front3(three) {
 function stringTimes(parola, volta) {
   return parola.repeat(volta) 
 }  
+
 console.log(stringTimes("Bada", 3) + " BOOM! ")
 
 
@@ -105,7 +106,7 @@ console.log(`The 2nd answer is ` + makeBricks(1, 5, 27))
 
 
 // How do I get subtotal as a variable to print in console.log()?
-// Could declar as a global variable, but then it doesn't evaluate to 10.
+// Could declare as a global variable, but then it doesn't evaluate to 10.
 //  + {subtotal} + ???
 
 function receipt(subtotal) {
@@ -145,7 +146,7 @@ console.log(stringTimes('Hi', 1));
 const stringBits1 = (string) => {
   const arr = string.split('')
   console.log(arr)
-  const testIfOdd = (i) => i % 2 === 
+  const testIfOdd = (i) => i % 2 === 1
   // 
   return string.split('').filter((c,i) => i % 2 ===0).join('')
 }
@@ -178,7 +179,7 @@ let words = ["yes ", "no ", "maybe "]
 } 
 console.log(relationShips())
 
-// Rewrite with a reduce 
+// Rewrite with a reduce  
 const stringSplosion1 = function (str) {
   let value = '';
   // .fill fills each index position with a value

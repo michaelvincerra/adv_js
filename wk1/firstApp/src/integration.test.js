@@ -42,6 +42,23 @@ describe('integration testing', () => {
       }
     })
   })
+  
+  it('renders the right number of tables row when filter out of stock')
+    // simulate click on the checkbox
+    // verify that the length od the products table is lower
+  app.find('#instock').simulate('change')
+  const productRows = app.find('ProductRow')
+  expect(productRows.length).toBe(4)
+
+  })
+  it('renders the correct number of product row ')
+  // 
+  const event = {target: {value: 'cheese'}}
+  // event.target.value === 'cheese'
+  app.find("#product-filter").simulate('change')
+
+// FInish this!!!
+
 })
 
 /* to test in the command line: -- -- coverage */
