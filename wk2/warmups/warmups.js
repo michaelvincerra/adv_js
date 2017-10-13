@@ -138,25 +138,19 @@ console.log(stringTimes('Hi', 1));
 
 // }
 
+// Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".
+// Use spit and join
 
+// Functions correctly
 const stringBits1 = (string) => {
-  
-  let out = ''
-  for (let i = 0; i < string.length; i+=2) {
-    out += string[i]
-  }
-  return out
+  const arr = string.split('')
+  console.log(arr)
+  const testIfOdd = (i) => i % 2 === 
+  // 
+  return string.split('').filter((c,i) => i % 2 ===0).join('')
 }
+console.log(stringBits1('Hello'))
 
-
-// const stringBits = (string) => {
-//   const arrayChar = string.split('')
-//   const testIfEven = (i) => i %  2 === 0
-//   const evenChars 
-//   return string.split('').filter((c,i) => i % 2 ===0).join('')
-// }
-// ​
-// console.assert(stringBits1('Hello') )
 
 const stringSplosion = function (str) {
   let to_return = '';
@@ -166,7 +160,23 @@ const stringSplosion = function (str) {
   return to_return
 };
 
+// HELP
+// convert for loop to forEach()
+let words1 = ["yes ", "no ", "maybe "]
+for(let i=0; i<words1.length; i++){
+  words1[i]+ "but..."
+}
 
+
+// HELP
+// How to formally add "but..." to for loop?
+function relationShips() { 
+let words = ["yes ", "no ", "maybe "]
+  words.forEach(function(word) {
+    console.log(word + 'but...')     
+  })
+} 
+console.log(relationShips())
 
 // Rewrite with a reduce 
 const stringSplosion1 = function (str) {
