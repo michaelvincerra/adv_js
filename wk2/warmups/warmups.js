@@ -164,9 +164,12 @@ const stringSplosion = function (str) {
 // HELP
 // convert for loop to forEach()
 let words1 = ["yes ", "no ", "maybe "]
-for(let i=0; i<words1.length; i++){
-  words1[i]+ "but..."
+for(let i=0; i<words1.length; i++) {
+  // Here we redefine the iterator
+  // words1 at index position equals words[i]
+  words1[i] = words1[i] + "but..."
 }
+console.log(words1)
 
 
 // HELP
@@ -174,8 +177,10 @@ for(let i=0; i<words1.length; i++){
 function relationShips() { 
 let words = ["yes ", "no ", "maybe "]
   words.forEach(function(word) {
-    console.log(word + 'but...')     
+    console.log(word + 'but...')
   })
+  return words
+  console.log(words)
 } 
 console.log(relationShips())
 

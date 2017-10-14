@@ -14,6 +14,8 @@ const compare = (recordA, recordB) => {
   // a must be equal to b
   return 0
 }
+// THis will take the Component to be used by all children that are stateless. 
+// THis will take the Component to be used by all children that are stateless. 
 
 class App extends Component {
   // constructor initalizes a stateful component

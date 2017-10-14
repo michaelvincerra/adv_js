@@ -5,6 +5,7 @@ export default class SearchBar extends Component {
     return (
       <div>
         <input
+          id="product-filter"
           value={this.props.searchText}
           onChange={this.props.onSearchChange}
           type='test'
@@ -16,6 +17,7 @@ export default class SearchBar extends Component {
           onChange={this.props.onInStockOnlyCheckChange}
           id='instock'
           type='checkbox'/>
+          
         <label htmlFor='instock'>Only show products in stock </label>
         <br/>
       </div>
