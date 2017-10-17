@@ -17,8 +17,6 @@ describe('integration testing', () => {
   })
 
   it('renders the correct number of filter rows when unfilled', () => {
-    // You must use .render() if you want to find DOM elements ONLY
-    // On the other hand you want to search for HTML elements, omit .render()
     const productRows = app.find('ProductRow')
     expect(productRows.length).toBe(6)
   })
@@ -28,10 +26,9 @@ describe('integration testing', () => {
     expect(categoryRows.length).toBe(2)
   })
 
-  it('uses proper color if item is out of stock', () => {
+  it('properly colors items if out of stock', () => {
     const productRows = app.find('ProductRow')
     productRows.forEach((productRow) => {
-      // productRow.render().find('tr td: first-child')
       const isStocked = productRow.props().record.stocked
       const domElement = productRow.render().find('tr td: first-child')
       const style = domElement[0].attribs.style
@@ -42,23 +39,18 @@ describe('integration testing', () => {
       }
     })
   })
-  
-  it('renders the right number of tables row when filter out of stock')
-    // simulate click on the checkbox
-    // verify that the length od the products table is lower
-  app.find('#instock').simulate('change')
-  const productRows = app.find('ProductRow')
-  expect(productRows.length).toBe(4)
-
+  it('renders the right number of tables row when filtering out of stock', () => {
+  // simulate click on the checkbox
+  // verify that the length od the products table is lower
+    app.find('#instock').simulate('change')
+    const productRows = app.find('ProductRow')
+    expect(productRows.length).toBe(4)
   })
-  it('renders the correct number of product row ')
-  // 
-  const event = {target: {value: 'cheese'}}
-  // event.target.value === 'cheese'
-  app.find("#product-filter").simulate('change')
-
-// FInish this!!!
-
+  it('renders the correct number of product rows when filter product names', () => { // 
+    const event = {target: {value: 'i'}}
+    // event.target.value === 'cheese'
+    app.find('#product-filter').simulate('change', event)
+    const productRows = app.find('ProductRow')
+    expect(productRows.length).toBe(2)
+  })
 })
-
-/* to test in the command line: -- -- coverage */

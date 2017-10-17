@@ -7,6 +7,7 @@ import SearchBar from './SearchBar'
 // categories are added, they are represented in distinct sections. 
 const compare = (recordA, recordB) => {
   if (recordA.category < recordB.category) {
+    return -1
   }
   if (recordB.category > recordA.category) {
     return 1
@@ -33,10 +34,10 @@ class App extends Component {
   // 'data' below could also be the entry point for an API. 
   componentWillMount () {
     this.setState({data: [
-      {category: 'Pasta', price: '$3.99', stocked: true, name: 'Farfalle'},
-      {category: 'Pasta', price: '$4.99', stocked: true, name: 'Strozzapreti'},
-      {category: 'Climbing Gear', price: '$89.99', stocked: true, name: 'Harness'},
-      {category: 'Climbing Gear', price: '$14.99', stocked: true, name: 'Carabiner'},
+      // {category: 'Pasta', price: '$3.99', stocked: true, name: 'Farfalle'},
+      // {category: 'Pasta', price: '$4.99', stocked: true, name: 'Strozzapreti'},
+      // {category: 'Climbing Gear', price: '$89.99', stocked: true, name: 'Harness'},
+      // {category: 'Climbing Gear', price: '$14.99', stocked: true, name: 'Carabiner'},
       {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
       {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
       {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
@@ -74,6 +75,7 @@ class App extends Component {
     )
   }
 }
+export default App
 /* for (let i = 0; i < filteredData.length; i++) {
     //   let record = filteredData[i]
     //   // ternary  statement is a more succinct option
@@ -96,4 +98,3 @@ class App extends Component {
     //   rows.push(<tr key={rkey}style={textColor}><td>{record.name}</td><td>{record.price}</td></tr>)
     // }
     End For Loop */
-export default App
