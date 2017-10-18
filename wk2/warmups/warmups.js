@@ -173,14 +173,17 @@ console.log(words1)
 
 
 // HELP
+// 
 // How to formally add "but..." to for loop?
 function relationShips() { 
-let words = ["yes ", "no ", "maybe "]
-  words.forEach(function(word) {
-    console.log(word + 'but...')
+
+  let words = ["yes ", "no ", "maybe "]
+  // create an empty list so original values are not changed. 
+  let newwords = []
+  words.forEach(function(word, i) {
+    newwords.push( word + "but...")    
   })
-  return words
-  console.log(words)
+  return newwords    
 } 
 console.log(relationShips())
 
