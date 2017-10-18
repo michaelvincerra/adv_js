@@ -162,7 +162,7 @@ const stringSplosion = function (str) {
 };
 
 // HELP
-// convert for loop to forEach()
+// AVOID ANTI-PATTERN BELOW
 let words1 = ["yes ", "no ", "maybe "]
 for(let i=0; i<words1.length; i++) {
   // Here we redefine the iterator
@@ -171,21 +171,8 @@ for(let i=0; i<words1.length; i++) {
 }
 console.log(words1)
 
+// HELP: why
 
-// HELP
-// 
-// How to formally add "but..." to for loop?
-function relationShips() { 
-
-  let words = ["yes ", "no ", "maybe "]
-  // create an empty list so original values are not changed. 
-  let newwords = []
-  words.forEach(function(word, i) {
-    newwords.push( word + "but...")    
-  })
-  return newwords    
-} 
-console.log(relationShips())
 
 // Rewrite with a reduce  
 const stringSplosion1 = function (str) {
@@ -196,7 +183,6 @@ const stringSplosion1 = function (str) {
   })
   return value
 }
-
 console.log(stringSplosion1('Code'));
 console.log(stringSplosion1('abc'));
 console.log(stringSplosion1('ab'));
@@ -220,7 +206,49 @@ function removeSmallest(numbers) {
 
 console.log(removeSmallest([10, 20, 30, 40]));
 
-//////////// MORE PRACTICE ON .slice() //////////////
+//////////// indexOf()  ///////////////
+// str.indexOf(searchValue[, fromIndex])
+// returns the index of the first occurrence of the specified value, 
+// (optional: starting the search at fromIndex)
+// Returns -1 if the value is not found.
+
+stringValue = "Excess in moderation."
+let newValue = stringValue.indexOf('in')   // 7
+console.log(newValue)
+
+stringValue = ["Excess", "in", "moderation", "."]
+let newValue = stringValue.indexOf('moderation')  // 2
+console.log(newValue)
+
+//////////// .splice() //////////////
+
+// The splice() method changes the contents of an array 
+// by removing existing elements and/or adding new elements.
+// array.splice(start, deleteCount, item1, item2, ...)
+
+
+function removeMaxNumber(numbers) {
+  let max = Math.max(...numbers)
+  numbers.splice(numbers.indexOf(max), 1);  
+  return numbers;    
+}
+
+console.log(removeMaxNumber([10, 20, 30, 300000, 40]))
+
+
+
+
+
+
+//////////// .slice() //////////////
+
+
+//  SYNTAX: arr.slice(begin, end)
+// The slice() method returns a shallow copy of a portion of an array 
+// into a new array object selected from begin to end (end not included). 
+// The original array will not be modified.
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+
 
 // function isOdd(numbers) {
 //   // Boolean. Are all numbers in array divisible by 2?

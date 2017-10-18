@@ -1,15 +1,11 @@
-
-
-function lone_sum(a, b, c) {
-    let arr = [a, b, c]; 
-    // if one value is repeated in a list, remove any other occurence.
-    arr = arr.filter(function(item, index, self) {
-    new_arr = self.indexOf(item) == index
-    return sum(new_arr)
-    });
-}
-
-
+// function lone_sum(a, b, c) {
+//     let arr = [a, b, c]; 
+//     // if one value is repeated in a list, remove any other occurence.
+//     arr = arr.filter(function(item, index, self) {
+//     new_arr = self.indexOf(item) == index
+//     return sum(new_arr)
+//     });
+// }
 
 // Rewrite function using || as you did originally
 // function lone_sum(a, b, c) {
@@ -29,44 +25,79 @@ function lone_sum(a, b, c) {
 //   console.log(a+b+c)
 //  }
 // }
-
-
-
-
-
-
-// function removeDupesAndSum(a,b,c)
-//     let arr = [a,b,c]
-//     let unique = arr.filter(function(elem, index, self){
-//         return index == self.indexOf(elem); 
-//     })
-// console.log(removeDupesAndSum(1,2,1))    
-
-// console.log(lone_sum(3, 2, 3))// 2
-
-
-// function lone_sum(a,b,c) {
-//     const sumList = (a,b,c)
-//     if(a === b || a === c || b === c){
-//         let a = ''; 
-//         let b = ''; 
-//         let c = ''; 
-//     }else{
-//         let sumList = sum(sumList)    
-//     }    
-// }
-
-console.log(lone_sum(3, 2, 3))// 2
-console.log(lone_sum(3, 3, 3)) // 0
-
-
-// function lone_sum(a,b,c) {
-    
-//     for(i =0; i<arr.length; i++)
-// }
-
 // const loneSum = (...myList) => {
 //     return myList
 //     .filter((value) => myList.filter(num)=> num === value).length ===1)
 //     .reduce((total, value) => total + value, 0)
 // }
+console.log(myList)
+
+///////////////////////////////
+//         forEach()         //
+///////////////////////////////
+function simpleSubtraction(){
+    let arr=[1, 3, 5, 7]
+    let newArr = []
+    arr.forEach(function(num, i){
+      // Why does -8, specifically, evaluate to negative prime values in reverse? 
+      newArr.push(num - 8)
+    })
+    return newArr
+  }
+  console.log(simpleSubtraction())
+  
+  function simpleAddition() {
+    let arr = [4, 16, 32, 64]
+    newArr = []
+    arr.forEach(function(num){
+      newArr.push(num + 4)
+    })
+     return newArr
+    }
+  console.log(simpleAddition())
+  
+  function simpleMultiply() {
+    let arr = [1, 3, 5, 7]
+    newArr = []
+    arr.forEach(function(num, i){
+      newArr.push(num * 3)
+    })
+    return newArr
+    }
+  console.log(simpleMultiply())
+  
+  function relationShips() { 
+    let words = ["yes ", "no ", "maybe "]
+    // create an empty list so original values are not changed. 
+    let newwords = []
+    words.forEach(function(word) {
+      newwords.push( word + "but...")    
+    })
+    return newwords    
+    } 
+  console.log(relationShips())
+
+///////////////////////////////
+//         filter()         //
+//////////////////////////////
+
+
+
+
+
+
+
+///////////////////////////////
+//         map()             //
+///////////////////////////////
+
+
+
+
+
+
+
+
+ ///////////////////////////////
+//         reduce()          //
+///////////////////////////////
