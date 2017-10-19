@@ -30,7 +30,7 @@
 //     .filter((value) => myList.filter(num)=> num === value).length ===1)
 //     .reduce((total, value) => total + value, 0)
 // }
-console.log(myList)
+// console.log(myList)
 
 ///////////////////////////////
 //         forEach()         //
@@ -81,17 +81,58 @@ function simpleSubtraction(){
 //         filter()         //
 //////////////////////////////
 
+// Remove a repeated value. 
+// str.indexOf(searchValue[, fromIndex])
+// returns the index of the first occurrence of the specified value, 
+// help
+function removeDuplicates(numbers) {
+    // find the value that's repeated; and find its index pos
+    // filter must be a Boolean
+    let unique = numbers.filter(function(item, index) {  
+      return numbers.indexOf(item) === index;
+      // indexOf() ONLY returns the first occurence of unique values; excludes repeated values
+   })
+      return unique
+  }
+  console.log(removeDuplicates([19, 29, 47, 19]))
+  
+  
+  // EXAMPLE
+  function tryMe(words) {
+  var uniqueArray = words.filter(function(word, index) {
+    // indexOf() ONLY returns the first occurence of unique values; excludes repeated values
+    return words.indexOf(word) == index;
+  });
+  return uniqueArray
+}
 
-
-
-
+  console.log(tryMe(['mike','james','james','alex']))
 
 
 ///////////////////////////////
 //         map()             //
 ///////////////////////////////
+// The map() method creates a new array with the results 
+// of calling a provided function on every element in the calling array.
 
 
+function findSqrt() {
+    let numbers = [1, 16, 64]
+    let roots = numbers.map(Math.sqrt)
+    return roots
+}
+console.log(findSqrt())
+
+
+function multiplier() {
+    let numbers = [1, 16, 64]
+    let sums = numbers.map(function(x) {
+        // IOW: Apply this function to each index pos in array
+        return x * 2;
+    }) 
+
+}
+console.log(multiplier())
 
 
 

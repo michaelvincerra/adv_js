@@ -28,6 +28,8 @@ class App extends Component {
       searchText: '',
       data: []
     }
+    // Use of this forms a permanent connection to App.js
+    
     this.changeInStockOnlyCheck = this.changeInStockOnlyCheck.bind(this)
     this.changeSearchText = this.changeSearchText.bind(this)
   }
@@ -67,7 +69,7 @@ class App extends Component {
         />
         <br/>
         <ProductTable
-          inStockOnlyCheck={this.state.inStockOnlyCheck}
+          inStockOnlyCheck={thi s.state.inStockOnlyCheck}
           searchText={this.state.searchText}
           data={this.state.data}
         />
