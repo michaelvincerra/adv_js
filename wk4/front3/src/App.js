@@ -7,7 +7,7 @@ const INITIAL_STATE = {
 
 class App extends Component {
   // From inside of the class, you don't need to include the 'function' keyword
-  // constructor is a function. It's like the dunder init __self__
+  // constructor is a function. It's like the dunder init: __self__
   constructor (props) {
     super(props)
 
@@ -18,7 +18,7 @@ class App extends Component {
     this.updateUserSpew = this.updateUserSpew.bind(this)
     this.wipeSpew = this.wipeSpew.bind(this)
   }
-
+ 
   updateUserSpew (event) {
     this.setState({userSpew: event.target.value})
   }
