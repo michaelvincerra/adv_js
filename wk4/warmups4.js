@@ -158,8 +158,23 @@ function primeSubtraction(){
 //         while()         //
 //////////////////////////////
 
+let x = 1
+let y = 2
 
+while ( x < 10) {
+  x++
+  x = x + y; 
+  console.log(x)
+}
+console.log(x)
 
+email_list = ['erica@gmail.com', '123@123.net', 'xylphobe@123.org', '1234.yes.com', '' ]
+
+let reg = /\w+[a-zA-Z0-9]\@\w+[a-zA-Z0-9]\.\w+g/,
+    match;
+while(match =reg.exec(email_list)) {
+  console.log(match); 
+}
 
 
 
@@ -173,6 +188,17 @@ function primeSubtraction(){
   ///////////////////////////////
 //         filter()         //
 //////////////////////////////
+
+
+let words = ['yes', 'no', 'and', 'maybe']
+let newWords = words.filter(function(word){
+  return word.length <= 3;
+}); 
+console.log(newWords)
+
+
+
+
 
 // Remove a repeated value. 
 // str.indexOf(searchValue[, fromIndex])
@@ -257,8 +283,11 @@ console.log(divideByTwo())
  ///////////////////////////////
 //         reduce()          //
 ///////////////////////////////
-
-
+arr = [0,1,2,3]
+const total = arr.reduce(function(sum, value) {
+  return sum + value;
+}, 1);
+console.log(total)
 
 // WARMUPS
 
