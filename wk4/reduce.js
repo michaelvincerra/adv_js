@@ -14,7 +14,7 @@ const total = arr.reduce(function(sum, value) {
   console.log(`current sum ${sum}`)
   console.log(`current value ${value}`)  
   return sum + value;
-}, 1);
+}, 1);  // This sets the default value of the first iteration
 console.log(total)
 
 
@@ -33,7 +33,7 @@ console.log(total1)
 // Loop starts with total value as one at start (1227.81),
 // Current 'amount' is the next value at right
 // Purpose: add current 'total' to the 'amount'
-// which is then repeated for as many values there are items in the arry. 
+// which is then repeated for as many values as there are in the arry. 
 
 const euro_expenses = [1227.81, 746.77]
 const sum = euro_expenses.reduce((total, amount) => total + amount)

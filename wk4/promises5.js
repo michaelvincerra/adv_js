@@ -1,4 +1,4 @@
-// Understanding Promises in JS
+// Understanding Promises in JS || TREEHOUSE
 // https://teamtreehouse.com/library/understanding-promises-in-javascript
 
 // calculation.js 

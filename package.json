@@ -1,0 +1,22 @@
+{
+  "name": "adv_js",
+  "version": "1.0.0",
+  "description": "Advanced Javascript: REACT",
+  "main": "makedb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelvincerra/adv_js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelvincerra/adv_js/issues"
+  },
+  "homepage": "https://github.com/michaelvincerra/adv_js#readme",
+  "dependencies": {
+    "eslint": "^4.9.0"
+  }
+}

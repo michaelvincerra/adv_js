@@ -20,7 +20,7 @@ function divideByFour() {
 console.log(divideByFour())
 
 
-function multiplier() {
+function multiplyByTwo() {
   let numbers = [4, 16, 32, 64]
   let sums = numbers.map(function(x) {
       // IOW: Apply this function to each index pos in array
@@ -28,7 +28,7 @@ function multiplier() {
   }) 
   return sums
 }
-multiplier()
+multiplyByTwo()
 
 
 function divideByThree() {
@@ -36,12 +36,12 @@ function divideByThree() {
   const result = arr1.map(x => x/3) 
       return result
 }
-console.log(divideByThree())
+divideByThree()
 
 function divideByTwo() {
   const arr1 = [1, 3, 5, 7, 11]
   const result = arr1.map(x => x/parseInt(2)) 
       return result
 }
-console.log(divideByTwo())
+divideByTwo()
 

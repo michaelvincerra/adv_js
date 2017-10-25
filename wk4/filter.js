@@ -1,10 +1,10 @@
 ///////////////////////////////
 //         filter()         //
 //////////////////////////////
-
+// Creates a new array with all elements that pass the test of the provided function
 
 let words = ['yes', 'no', 'and', 'maybe']
-let newWords = words.filter(function(word){
+let newWords = words.filter(function(word){   // word is the iterator
   return word.length <= 3;
 }); 
 console.log(newWords)
