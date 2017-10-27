@@ -19,6 +19,16 @@ function makeBody () {
   // console.log(firstName, lastName, email, streetAddress, city, state, zipCode, country)
   // console.log(passwordHash)
 
+
+const imageSlug = new Promise((resolve, reject) => {
+  avatar('apple', 'male', 400).toBuffer(function (err, buffer) {
+    if (err) {
+      reject(new Error('Che Cavolo!'))
+    }
+    resolve(`data:image/png;base64,${buffer.toString('base64')}`)
+  })
+})
+
   return {
     firstName,
     lastName,
@@ -28,9 +38,9 @@ function makeBody () {
     state,
     country,
     zipCode,
-    passwordHash
+    passwordHash, 
+    imageSlug
   }
-}
 
 const createUsers = async () => {
   await fetch('https://prova1234-35cf3.firebaseio.com/thing.json', {method: 'DELETE'})
@@ -38,7 +48,8 @@ const createUsers = async () => {
   for (let i = 0; i < 100; i++) {
     var myInit = {
       method: 'POST',
-      body: JSON.stringify(makeBody())
+      body: await JSON.stringify(makeBody())
+      // body: JSON.stringify(makeBody())
     }
 
     const response = await fetch('https://prova1234-35cf3.firebaseio.com/thing.json', myInit)

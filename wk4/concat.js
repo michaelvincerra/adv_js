@@ -4,6 +4,11 @@
 // Merges two or more arrays. This method does not change 
 // the existing arrays, but instead returns a new array.
 
+// See: 
+// Faddahs Silly JS Tricks
+// Kalob Taulien Essential JS course 
+// https://codepen/io/faddah
+
 
 let arr1 = [1, 2, 3, 4, 5]
 let arr2 = [6, 7, 8, 9, 10]
