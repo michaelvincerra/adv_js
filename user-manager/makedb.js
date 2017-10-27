@@ -1,5 +1,8 @@
 /* eslint-disable no-console */
 // TODO: https://ashwinvalento.github.io/cartoon-avatar/
+// https://github.com/arusanov/avatar-generator
+// https://github.com/marak/Faker.js/
+// https://github.com/blueimp/JavaScript-MD5
 
 const faker = require('faker')// Equivalent to the import statement. 
 const md5 = require('blueimp-md5')// This sets a hash for password protection

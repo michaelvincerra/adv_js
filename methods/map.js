@@ -14,7 +14,7 @@ console.log(findSqrt())
 
 function divideByFour() {
   const arr = [2, 4, 8, 16, 32, 64]
-  const result = arr.map(x => x/4) // Note: Also consider: parseFloat(.33) * 3, or parseFloat(.11)..(.22), etc.
+  const result = arr.map((x) => x/4) // Note: Also consider: parseFloat(.33) * 3, or parseFloat(.11)..(.22), etc.
       return result 
 }
 console.log(divideByFour())
@@ -45,3 +45,9 @@ function divideByTwo() {
 }
 divideByTwo()
 
+function adVerbly() {
+    let arr3 = ['perfect', 'absolute', 'adamant']
+    let newArr = arr3.map((x) => x+'ly')
+    return newArr
+  }
+  adVerbly()
