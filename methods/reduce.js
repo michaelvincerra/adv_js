@@ -14,9 +14,8 @@ const total = arr.reduce(function(sum, value) {
   console.log(`current sum ${sum}`)
   console.log(`current value ${value}`)  
   return sum + value;
-}, 1);  // This sets the default value of the first iteration
+}, 0);  // This sets the starting value of the first iteration
 console.log(total)
-
 
 
 arr1 = [1, 2, 3, 4, 5]

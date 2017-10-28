@@ -51,3 +51,29 @@ function adVerbly() {
     return newArr
   }
   adVerbly()
+
+  function suffixly1() {
+    let arr = ['obsequious', 'lugubrious']
+    let modArray = arr.map((lambda) => lambda + 'ly')
+    // console.log(arr)
+    return modArray      
+  }
+//   suffixly1()
+//   console.log((arr))
+  
+  const foo = ['obsequious', 'lugubrious']
+  
+  function suffixly2() {
+    let modArray = foo.map((lambda) => lambda + 'ly')
+    return modArray 
+  }
+  suffixly(foo)
+
+  function suffixly3(bah, boo) {
+    let modArray = foo.map((lambda) => lambda + 'ly')
+    return modArray 
+  }
+  suffixly('obsequious', 'lugubrious')
+
+
+

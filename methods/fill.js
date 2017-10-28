@@ -25,10 +25,5 @@ return newArr
 filler2()
 // console.log(arr2)
 
-function filler3() {
-  let arr3 = ['perfect', 'absolute', 'adamant']
-  let newArr = arr3.map((x) => x+'ly')
-  return newArr
-}
-filler3()
+
 
