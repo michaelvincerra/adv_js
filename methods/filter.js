@@ -51,7 +51,7 @@ console.log(indexOf(1))
 // filter out only those items that are strings. 
 
 
-function something(value) {
+function stringMeAlong(value) {
   arr = []
   for(i = 0; i <value.length; i ++) {
     if(typeof value[i] === 'string'){
@@ -60,10 +60,10 @@ function something(value) {
    }
    return arr
 }
-something(["sal", "jack", 1])
+stringMeAlong(["Al", "Jack", 1, 2, 3, "Johnny"])
 
-// something()
-let somethingElse = ["sal", "jack", 1]
+// stringMeAlong() revised as a filter()
+let somethingElse = ["sal", "jack", 1, "johnny"]
 let somethingCompletelyDifferent = somethingElse.filter(elem => 
     typeof elem === 'string'      
   )
@@ -76,10 +76,11 @@ console.log(somethingCompletelyDifferent)
 //     }
 //   )
 // console.log(somethingCompletelyDifferent)
+let wordsOfWisdom = []
 
 let wordsOfWisdom = [1, 2, "hilarious", "obstinate"]
 // Here filter is used to apply a function to a specific array. 
-let fromageNuoveau = wordsOfWisdom.filter(something()) 
+let fromageNuoveau = wordsOfWisdom.filter(stringMeAlong()) 
 
 console.log(fromageNuoveau)
   
