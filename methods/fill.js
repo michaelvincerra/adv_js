@@ -10,6 +10,7 @@
 function filler1() {
 let arr1 = [1, 2, 3, 4, 5]    // 3, 6, 9, 12, 15
 let newArr = arr1.map((x) => x * 3).fill(100, 4)
+// .fill( [first param is fillvalue, second is index position]
   return newArr
 }
 filler1()

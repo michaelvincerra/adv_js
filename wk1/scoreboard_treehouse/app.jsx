@@ -9,12 +9,12 @@
 
 var PLAYERS = [
   {
-    name: "Zaundra Zhivago",
+    name: "Massimo",
     score: 31,
     id: 1,
   },
   {
-    name: "Ricardo Reyes",
+    name: "Niko",
     score: 35,
     id: 2,
   },
