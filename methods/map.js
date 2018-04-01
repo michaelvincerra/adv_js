@@ -38,6 +38,7 @@ function divideByThree() {
 }
 divideByThree()
 
+
 function divideByTwo() {
   const arr1 = [1, 3, 5, 7, 11]
   const result = arr1.map(x => x/parseInt(2)) 
@@ -52,14 +53,16 @@ function adVerbly() {
   }
   adVerbly()
 
+
+ // Doby's examples. 
+
   function suffixly1() {
-    let arr = ['obsequious', 'lugubrious']
-    let modArray = arr.map((lambda) => lambda + 'ly')
+    let arr = ['obsequious', 'lugubrious', 'love', 'peaceful']
+    let modArray = arr.map((x) => x + 'ly')
     // console.log(arr)
-    return modArray      
+    return modArray          
   }
-//   suffixly1()
-//   console.log((arr))
+  suffixly1()
   
   const foo = ['obsequious', 'lugubrious']
   
@@ -67,13 +70,13 @@ function adVerbly() {
     let modArray = foo.map((lambda) => lambda + 'ly')
     return modArray 
   }
-  suffixly(foo)
+  suffixly2(foo)
 
   function suffixly3(bah, boo) {
     let modArray = foo.map((lambda) => lambda + 'ly')
     return modArray 
   }
-  suffixly('obsequious', 'lugubrious')
+  suffixly3('obsequious', 'lugubrious')
 
 
 

@@ -16,7 +16,6 @@ const compare = (recordA, recordB) => {
   return 0
 }
 // THis will take the Component to be used by all children that are stateless. 
-// THis will take the Component to be used by all children that are stateless. 
 
 class App extends Component {
   // constructor initalizes a stateful component
@@ -28,8 +27,8 @@ class App extends Component {
       searchText: '',
       data: []
     }
-    // Use of this forms a permanent connection to App.js
-    
+    // Using this forms a permanent connection to App.js
+
     this.changeInStockOnlyCheck = this.changeInStockOnlyCheck.bind(this)
     this.changeSearchText = this.changeSearchText.bind(this)
   }
@@ -69,7 +68,7 @@ class App extends Component {
         />
         <br/>
         <ProductTable
-          inStockOnlyCheck={thi s.state.inStockOnlyCheck}
+          inStockOnlyCheck={this.state.inStockOnlyCheck}
           searchText={this.state.searchText}
           data={this.state.data}
         />
@@ -78,6 +77,7 @@ class App extends Component {
   }
 }
 export default App
+
 /* for (let i = 0; i < filteredData.length; i++) {
     //   let record = filteredData[i]
     //   // ternary  statement is a more succinct option

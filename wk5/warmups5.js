@@ -41,8 +41,8 @@ abbreviate("elephant-rides are really fun!")
 // join the characters together
 
 
-89 = 8^1 + 9^2
-135 1^1 + 3^2 + 5^3
+// 89 = 8^1 + 9^2
+// 135 1^1 + 3^2 + 5^3
 
 
 // Get a range of numbers with a low and a high

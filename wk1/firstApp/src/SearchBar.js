@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 export default class SearchBar extends Component {
   render () {
@@ -12,13 +12,15 @@ export default class SearchBar extends Component {
           placeholder='search'
         />
         <br/>
+
         <input
           checked={this.props.inStockOnlyCheck}
           onChange={this.props.onInStockOnlyCheckChange}
           id='instock'
-          type='checkbox'/>
-          
+          type='checkbox' />
+
         <label htmlFor='instock'>Only show products in stock </label>
+
         <br/>
       </div>
     )

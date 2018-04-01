@@ -152,7 +152,7 @@ const stringBits1 = (string) => {
 }
 console.log(stringBits1('Hello'))
 
-
+// Jenna's example
 const stringSplosion = function (str) {
   let to_return = '';
   for (let i = 0; i < str.length + 1; i++) {

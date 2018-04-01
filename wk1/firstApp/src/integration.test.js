@@ -46,6 +46,7 @@ describe('integration testing', () => {
     const productRows = app.find('ProductRow')
     expect(productRows.length).toBe(4)
   })
+
   it('renders the correct number of product rows when filter product names', () => { // 
     const event = {target: {value: 'i'}}
     // event.target.value === 'cheese'
